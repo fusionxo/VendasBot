@@ -1,0 +1,39 @@
+Versão antiga do BOT: https://cdn.discordapp.com/attachments/938190783465533530/1002984443423752283/Bot_de_Vendas_Automaticas.zip
+Instalação: https://youtu.be/n19adoNzUOg
+Mongo DB: https://mongodb.com/
+Mercado Pago Token (Produção): https://www.mercadopago.com.br/settings/account/credentials
+Arrumar possivel Error (Ative): https://prnt.sc/7VxaQft5YDt_
+Como utilizar o BOT: https://youtu.be/Bbcfg4B44bs
+
+Está tendo error: syntaxerror cannot use import statement outside a module
+Delete o arquivo: json.sqlite e inicie o bot novamente pronto.
+
+Altere isso em cada comando.js incluindo index.js:
+setThumbnail
+setImage
+setFooter
+
+Quer setar a tag/logs pelo comando botconfig sem precisar alterar no config.json?
+
+reative os codigo dessas linhas no INDEX.JS:
+const LogsDb = await db.get(`logs_vendas${interaction.guild.id}`)
+const CargoCliente = await db.get(`cargocliente_${interaction.guild.id}`)
+
+E depois: defina LogsDb & CargoCliente dentro de cada get() final exemplo:
+let Cliente = client.guilds.cache.get(interaction.guild.id).roles.cache.get(CargoCliente);
+
+- Bot de Vendas Automaticas -
+Uma vez que o bot esteja online, esses são so comandos:
+Comando: BotConfig - Menu de configuração do BOT.
+Comando: lucros - Mostra os lucros totais da loja.
+Comando: criar - Mostra algum produto cadastrado.
+Comando: atualizarestoque - adiciona mais stocks em seus produto.
+Comando: produtocadastrar - Faz o cadastro de algum produto novo.
+Comando: produtoremover - Faz o cadastro de algum produto novo.
+Comando: Perfil - Mostra o seu perfil ou marcando alguem mostra quanto ele já gastou.
+
+- Ticket System-
+Após alterações no arquivo ticket.js:
+Comando: ticketsetup - Mostra o menu de suporte
+
+- Qualquer problema ou error, entre em contato através da GGMAX.
